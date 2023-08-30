@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #213555;
+      background-image: url("pxfuel.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .menu {
+      background-color: #213555;
+      color: #F5EFE7;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .menu-item i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    
+    .menu-item:hover {
+      background-color: #4F709C;
+    }
+    
+    .menu-item:hover i {
+      color: #D8C4B6;
+    }
+
+    .box-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #F5EFE7;
+      margin: 100px auto;
+      padding: 20px;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .box-image {
+      flex: 0 0 auto;
+      margin-right: 20px;
+    }
+
+    .box-content {
+      flex: 1 1 auto;
+    }
+
+    .box-content h2 {
+      color: #213555;
+      font-size: 40px;
+      margin-top: 0;
+    }
+
+    .box-content p {
+      color: #213555;
+    }
+  </style>
+  <script>
+      function confirmLogout(event) {
+        event.preventDefault(); // Mencegah tindakan default dari tautan
+    
+        var confirmation = confirm("Yakin anda akan logout?");
+        if (confirmation) {
+          window.location.href = event.currentTarget.getAttribute("href");
+        }
+      }
+  </script>
+</head>
+
+<body>
+  <div class="menu">
+    <div class="menu-item">
+      <a href="home.html">
+        <i class="fas fa-home" style="color: #F5EFE7;"></i>
+        <span style="color: #F5EFE7;">Home</span>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="interest.html">
+        <i class="fas fa-heart" style="color: #F5EFE7;"></i>
+        <span style="color: #F5EFE7;">Interest</span>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="sosmed.html">
+        <i class="fas fa-location-arrow" style="color: #F5EFE7;"></i>
+        <span style="color: #F5EFE7;">Social Media</span>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="kontak.php">
+        <i class="fas fa-envelope" style="color: #F5EFE7;"></i>
+        <span style="color: #F5EFE7;">Contact</span>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="login.php?logout=true" onclick="confirmLogout(event)">
+        <i class="fas fa-sign-out-alt" style="color: #F5EFE7;"></i>
+        <span style="color: #F5EFE7;">Log Out</span>
+      </a>
+    </div>
+  </div>
+
+  <section>
+    <div class="box-container">
+      <div class="box-image">
+        <img src="nad.png" alt="Profile Picture" style="width: 300px; height: 300px; border-radius: 50%;">
+      </div>
+      <div class="box-content">
+        <center><h2 style="color: #213555;">About Me</h2></center>
+        <p style="color: #213555;">Saya mahasiswi semester 6 yang terorganisir, penuh semangat, dan bersemangat tinggi dalam keuangan, administrasi, dan teknologi informasi. Saya telah mengembangkan minat ini dengan mengikuti kegiatan organisasi selama 2 tahun. Saya senang belajar hal baru dan selalu bersemangat untuk menjelajahi diri saya sendiri guna meningkatkan kemampuan, pengetahuan, dan pengalaman.</p>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
